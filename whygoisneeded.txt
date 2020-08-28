@@ -1,0 +1,27 @@
+Need for Go
+
+History and design of old langauges are running into scale issues (when running / compiling / simplicity at scale )
+Python :- Easy to use , but slow  (interprative langauge)
+Java :- Increasingly complex type system due additon of new features (mainly simplicity is more problem)
+C/C++ :- Increasingly complex type system and slow compile time legacy issues
+
+All of the above have concurrency feature patched in later to accomodate for later developments in multicore CPU, running highly parallel application at scale can be challenging
+
+GO (golang)
+-> Strong and statically typed (same as that of C++/C/Java)
+     type of variable cannot change later -> Strong
+     all varibale have to defiened at compile time -> Static
+     -> Compiler of go does lot of heavy lifting so that type definition doesn't become verbose unlike in Java/C/C++
+-> Ofcoure Excellent community
+-> Key Feautres
+   -> Simplicity 
+   -> Fast Compile Time
+   -> Garbage Collected -> runtime managed
+   -> Built in Concurrency
+   -> Compile to standalone libraries
+        --> everything bundled in binary , making version management trivial (not external libraries)
+
+
+
+
+
