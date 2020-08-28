@@ -1,0 +1,16 @@
+
+https://golang.org  -> Go Home Page (with Online IDE to run small smaples)
+
+https://golang.org/doc/ -> Getting Started , Intallation , How to write Go, Tools (Contains all the links form basic to advanced GO features)
+
+https://golang.org/pkg/  -> All libraries built into GO , which library to use.
+    -> A Play tab when clicked inside package pops a window on how to use the package for POC
+
+https://golang.org/doc/effective_go.html  -> Effective Go (For Advanced Developement))
+
+Go Help Tab -> https://golang.org/help/  -> Go Forum and Go Slack for asking questions are most used
+
+https://play.golang.org/ -> Online palyground for running go code and leanring 
+
+
+
