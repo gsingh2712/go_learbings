@@ -30,6 +30,17 @@ const (
 	_ is write only garbage store in go for storing default value
 */
 
+/*
+   Enumerated constants along with iota and bit shiting
+   can work real wonders
+*/
+
+/*
+   It uses the same function to assign further values
+   as used in the initial function
+   1 << ( 10 * iota) is the function in the case below
+*/
+
 const (
 	// _ is write only garbage store in go for storing default value in this case 0
 	_ = iota
