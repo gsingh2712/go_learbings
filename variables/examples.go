@@ -12,7 +12,9 @@ import (
 )
 
 /*
-here full decleration compulsory (declared and limited to the scope of package main)
+
+Full decleration compulsory if done here (declared and limited to the scope of package main)
+first letter must be small case to limit the scope to the package it is contained in (in this case main)
 */
 var o int = 30
 
