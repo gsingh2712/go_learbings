@@ -8,6 +8,7 @@ import "fmt"
 	  -> slices , maps and functions can't be used as key type
  3. Return Order in a map is not gauranteed
  4. Maps in assignment and passing by are by reference , hence manipulating one changes the underlying map
+ 5. Comma , Ok syntax to find non exitant keys
 
 */
 

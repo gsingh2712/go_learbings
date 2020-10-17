@@ -11,6 +11,7 @@ While all other Collection types store data of same types
 -> Inspecting elments you need to use . dots
 
 -> Structs work by passing copies and not by reference, unless you use 'address &' of operator
+	-> Structs are value types
 
 -> Go doesn't support inheritence , but supports embedding of structs to achieve this
 	-> To achieve 'HAS A' relationship behaviour of inheritance and not 'IS A' relationship
