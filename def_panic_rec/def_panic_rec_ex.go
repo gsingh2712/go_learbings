@@ -39,7 +39,7 @@ Recover :-
 func main() {
 
 	fmt.Println("Start")
-	defer fmt.Println("middle") // will be executed just before executing main
+	defer fmt.Println("middle") // will be executed just before exiting main
 	fmt.Println("end")
 
 	/*

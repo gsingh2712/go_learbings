@@ -19,7 +19,10 @@ import (
 func main() {
 	fmt.Println("start")
 	panicker()
-	fmt.Println("end") // Executed despite Panic in panciker ()
+	fmt.Println("end") // Executed despite Panic in panciker() ,
+	// since defer function has recover function in it , which makes it recover from panic
+	// so when control comes back to main function it has recovered from panic
+
 }
 
 func panicker() {
@@ -29,7 +32,7 @@ func panicker() {
 		if err := recover(); err != nil {
 			log.Println("Error: ", err)
 		}
-	}() // anonymous fucntion no name and are just called
+	}() // anonymous fucntion (no name and are just called with help of paranthesis)
 	panic("something bad happened")  // Programmitically called panic button
 	fmt.Println(" Done Panciking  ") // not executed since panic happened in this function
 }
