@@ -14,6 +14,8 @@ import (
 
   --> Functions in go are actually very powerful and can be treated as TYPES
 			-> It means they can be assigned to a variable
+
+  --> See how method decleration is done for Structs
 */
 
 func main() {
@@ -31,6 +33,16 @@ func main() {
 		fmt.Println("Hello Go! Anonymous")
 	}
 	f() // --> Calling the function via assgigned variable
+
+	gInstance := greeter{
+		greeting: "Hello From Greeter",
+		name:     "Go",
+	}
+
+	gInstance.greet()
+
+	gInstance.referencegreet() // Here gInstance is passed by pointer
+	fmt.Println(gInstance.greeting, gInstance.name)
 }
 
 func sayMessage(msg string) {
@@ -60,4 +72,28 @@ func divide(a, b float64) (float64, error) {
 	}
 
 	return a / b, nil
+}
+
+type greeter struct {
+	greeting string
+	name     string
+}
+
+/*
+This is method greet() declared for struct greeter
+g represents the context / struct instance on which greet() has been called
+The g here is pass by value any editing on Struct variable wont reflect
+*/
+func (g greeter) greet() {
+	fmt.Println(g.greeting, g.name)
+	g.greeting = "" // This wont work since it is pass by value
+}
+
+/*
+This is another method declared for struct greeter
+The g here is pass by pointer any editing on Struct variable will reflect
+*/
+func (g *greeter) referencegreet() {
+	// Go supports implicit dereferencing hence no need for (*g).greeting
+	g.greeting = "Hello from Referenced greet" // This works since it is pass by reference
 }
