@@ -23,6 +23,10 @@ var m = sync.RWMutex{} // Read Write Mutex,
 
 // Using mutexes to synchronize things in this example
 
+// YOU CAN CHECK for race conditions in your Go Application
+// using go compiler with -race param to (go run / build / install  ) whatever you use to run Go Application
+// example  go run -race <GoCode>
+
 func main() {
 	/*
 		IT is for getting number for threads ,
