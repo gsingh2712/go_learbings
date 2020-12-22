@@ -18,15 +18,15 @@ func main() {
 	wg.Add(2)
 
 	go func(ch <-chan int) {
-		i := <-ch
-		fmt.Println(i)
-		i = <-ch
-		fmt.Println(i)
+		for i := range ch { // If close(ch) not called as in sender,
+			fmt.Println(i) // for range will hit deadlock as it doesn't know where to end
+		}
 		wg.Done()
 	}(ch)
 	go func(ch chan<- int) {
 		ch <- 42
 		ch <- 27
+		close(ch) // IMP to close the channel
 		wg.Done()
 	}(ch)
 
