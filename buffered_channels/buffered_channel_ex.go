@@ -21,6 +21,17 @@ func main() {
 		for i := range ch { // If close(ch) not called as in sender,
 			fmt.Println(i) // for range will hit deadlock as it doesn't know where to end
 		}
+		/*
+			for range in above in case of chanel or maps go Reads it like this
+			for {
+				if i, ok := <- ch; ok {
+					fmt.Println(i)
+				} else {
+					break
+				}
+			}
+
+		*/
 		wg.Done()
 	}(ch)
 	go func(ch chan<- int) {
