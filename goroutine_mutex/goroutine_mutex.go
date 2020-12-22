@@ -51,6 +51,7 @@ func main() {
 		Food for thought?
 		Though this solves problem but it has destryed concurrecny and
 		parallelism , it would have been better to run without Go Routines at all.
+		This is just an example to illustrate how to use mutexes
 	*/
 	for i := 0; i < 10; i++ {
 		wg.Add(2) // Total 20 Wg's
