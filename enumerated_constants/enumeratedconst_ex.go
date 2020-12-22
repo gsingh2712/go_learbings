@@ -74,6 +74,10 @@ func main() {
 	fmt.Printf(" %v, %T\n", f, f)
 	fmt.Printf(" %v, %T\n", g, g)
 
+	fmt.Printf(" KB %v bytes, %T\n", KB, KB)
+	fmt.Printf(" MB %v KB , %v bytes, %T\n", MB/KB, MB, MB)
+	fmt.Printf(" GB %v MB,  %v bytes,   %T\n", GB/MB, GB, GB)
+
 	fileSize := 4000000000.
 	fmt.Printf("%.2fGB \n", fileSize/GB)
 
