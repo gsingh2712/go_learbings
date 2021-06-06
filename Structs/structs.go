@@ -77,6 +77,8 @@ func main() {
 	// inspecting elements
 	fmt.Println(aDoctor.companions[1:]) // using slice feature to print from index 1 to last
 
+	fmt.Printf("Structs with member and its values  %+v  \n", aDoctor)
+
 	glDoctor := Doctorgl{
 		Number:    4,
 		ActorName: "SSR",
@@ -108,4 +110,14 @@ func main() {
 	b.SpeedKPH = 48
 	b.Canfly = false
 	fmt.Println("  Bird emu  ", b)
+
+	c := Bird{}
+	c.Name = "Emu"
+	c.Origin = "Australia"
+	c.SpeedKPH = 48
+	c.Canfly = false
+	fmt.Println(" Bird b and c are same  ", b == c)
+	/*
+	 structs can be compared if they dont contain uncomparable fields like slice , map , function ..
+	*/
 }

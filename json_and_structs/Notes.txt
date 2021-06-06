@@ -1,0 +1,16 @@
+Field Tagging in structs example  
+
+type user struct { // #1
+	Name        string      `json:"username"`
+	Password    string      `json:"-"`
+	Permissions permissions `json:"perms,omitempty"` 
+}
+
+`json:"username"` -> Is a Field Tag 
+
+* It tells when converting to json and vice versa 'username' key in json maps to 'Name' in Struct
+* omitempty -> It tells that converting to json (Encoding) if the 'Permissions' 
+             is missing drop it in final json rather than making it null.
+
+* Filed names should be exportable ( Capital letter in beginning ). 
+*  `json:..` in field Tag is called key and tells that only json package can read this tag  
